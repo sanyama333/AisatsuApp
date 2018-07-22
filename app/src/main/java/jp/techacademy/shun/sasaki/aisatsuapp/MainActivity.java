@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     @Override
                     public void onTimeSet(TimePicker view, int hourODay, int minute) {
                         Log.d("UI_PARTS", String.valueOf(hourODay) + ":" + String.valueOf(minute));
-                        if(hourODay > 17 || hourODay == 1){
+                        if(hourODay > 17 || hourODay == 1 || hourODay == 0){
                             mTextView.setText("こんばんは");
                         }else if(hourODay > 9){
                             mTextView.setText("こんにちは");
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         }
                     }
                 },
-                0,
+                13,
                 0,
                 true);
         timePickerDialog.show();
